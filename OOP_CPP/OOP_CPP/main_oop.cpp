@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 class Point
@@ -62,6 +63,11 @@ public:
 	{
 		cout << x << "\t" <<  y << endl;
 	}
+
+	void distance()
+	{
+		cout << "Distance:\t" << abs(sqrt(pow(this->x,2) + pow(this->y,2))) << endl;
+	}
 };
 
 
@@ -89,13 +95,16 @@ int main()
 	A.set_x(2);
 	A.set_y(3);*/
 	cout << A.get_x() << "\t" << A.get_y() << endl;
+	A.distance();
 
 	Point B;
 	//cout << B.get_x() << "\t" << B.get_y() << endl;
 	B.print();
+	B.distance();
 
 	Point C = 5;
 	C.print();
+	C.distance();
 
 	Point D = C;
 	D.print();
